@@ -11,7 +11,7 @@
     color: #222;
 }
 
-/* Contact Section Styling */
+
 .ContactFooterApp .contact-section {
     max-width: 700px;
     width: 100%;
@@ -37,7 +37,6 @@
     text-transform: uppercase;
 }
 
-/* Form Styling */
 .ContactFooterApp .contact-form {
     display: flex;
     flex-direction: column;
@@ -102,7 +101,6 @@
     box-shadow: 0 8px 25px rgba(29, 78, 216, 0.7);
 }
 
-/* Contact Details Styling */
 .ContactFooterApp .contact-details {
     margin-top: 35px;
     font-family: 'Roboto', sans-serif;
@@ -129,7 +127,6 @@
     color: #1d4ed8;
 }
 
-/* Footer Styling */
 .ContactFooterApp .footer {
     width: 100%;
     max-width: 1200px;
@@ -187,7 +184,7 @@
     object-fit: contain;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .ContactFooterApp {
         padding: 15px;
