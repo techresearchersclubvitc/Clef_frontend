@@ -1,5 +1,17 @@
-# Audio files
-audio/*.mp3
+# Project ignores (customize as needed)
+# Keeping audio files tracked in this repository
 
-# Keep the audio directory structure and README
-!audio/README.md
+# Node / environment
+node_modules/
+.env
+
+# Build artifacts
+dist/
+build/
+
+# Logs
+.log
+
+# Temporary files
+*.tmp
+
