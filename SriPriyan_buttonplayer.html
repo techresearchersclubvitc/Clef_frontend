@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive button audio player for learning musical notes">
+    <title>Button Audio Player</title>
+    <link rel="stylesheet" href="SriPriyan_buttonplayer.css">
+</head>
+<body>
+    <main class="player-container" role="main">
+        <header class="player-header">
+            <h1>Interactive Note Player</h1>
+            <p class="player-description">Select a mode (+/−) and click a note to hear its sound</p>
+        </header>
+
+        <section class="mode-section" aria-label="Mode selection">
+            <h2 class="visually-hidden">Select Playing Mode</h2>
+            <div class="mode-buttons" role="group" aria-label="Mode toggle buttons">
+                <button 
+                    type="button"
+                    id="mode-plus"
+                    class="mode-btn active"
+                    data-mode="plus"
+                    aria-pressed="true"
+                    aria-label="Plus mode"
+                    title="Plus Mode">
+                    <span aria-hidden="true">+</span>
+                </button>
+                <button 
+                    type="button"
+                    id="mode-minus"
+                    class="mode-btn"
+                    data-mode="minus"
+                    aria-pressed="false"
+                    aria-label="Minus mode"
+                    title="Minus Mode">
+                    <span aria-hidden="true">−</span>
+                </button>
+            </div>
+            <div id="mode-status" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true">
+                Current mode: Plus
+            </div>
+        </section>
+
+        <section class="notes-section" aria-label="Musical notes">
+            <h2 class="visually-hidden">Select a Note to Play</h2>
+            <div id="notes-container" class="notes-grid" role="group" aria-label="12 musical note buttons"></div>
+            <div id="note-status" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true">
+                No note played yet
+            </div>
+        </section>
+
+        <aside class="keyboard-instructions" aria-label="Keyboard navigation help">
+            <h3>Keyboard Navigation</h3>
+            <ul>
+                <li><kbd>Tab</kbd> - Navigate between buttons</li>
+                <li><kbd>Enter</kbd> or <kbd>Space</kbd> - Activate button</li>
+                <li><kbd>Shift + Tab</kbd> - Navigate backwards</li>
+            </ul>
+        </aside>
+
+        <div id="audio-container" class="visually-hidden" aria-hidden="true"></div>
+    </main>
+
+    <script type="module" src="SriPriyan_buttonplayer.js"></script>
+</body>
+</html>

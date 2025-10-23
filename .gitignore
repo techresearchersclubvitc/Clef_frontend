@@ -1,0 +1,5 @@
+# Audio files
+audio/*.mp3
+
+# Keep the audio directory structure and README
+!audio/README.md
