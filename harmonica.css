@@ -1,0 +1,200 @@
+/* ---------- Page Setup ---------- */
+body {
+  background: radial-gradient(circle at center,
+              #f5f2ea 0%, 
+              #e0cfa5 40%, 
+              #b9d7f5 80%);
+  background-attachment: fixed;
+  background-size: cover;
+  color: #333;
+  font-family: "Segoe UI", sans-serif;
+  text-align: center;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Soft vignette overlay for stage-like lighting */
+body::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, transparent 60%, rgba(0, 0, 0, 0.15) 100%);
+  pointer-events: none;
+}
+
+/* Header and hint text */
+h1 {
+  margin-bottom: 8px;
+  color: #3a3a3a;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+.hint {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+}
+
+/* ---------- Harmonica Body ---------- */
+.harmonica-body {
+  position: relative;
+  background: linear-gradient(180deg, #ddd 0%, #b8b8b8 40%, #8f8f8f 60%, #c7c7c7 100%);
+  width: 900px;
+  height: 170px;
+  border-radius: 20px;
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    inset 0 4px 15px rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 25px 10px 40px;
+  border: 3px solid #aaa;
+  backdrop-filter: blur(2px);
+}
+
+/* ---------- Metal top and bottom edges ---------- */
+.metal-top,
+.metal-bottom {
+  position: absolute;
+  width: 92%;
+  height: 14px;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #fafafa, #ccc);
+  box-shadow: inset 0 2px 3px rgba(255,255,255,0.6),
+              inset 0 -2px 3px rgba(0,0,0,0.25);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.metal-top { top: 6px; }
+.metal-bottom { bottom: -10px; }
+
+/* ---------- Screws ---------- */
+.screw {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ddd, #777);
+  border: 2px solid #555;
+  top: 12px;
+  box-shadow: inset 2px 2px 4px rgba(0,0,0,0.5);
+}
+.screw.left { left: 25px; }
+.screw.right { right: 25px; }
+
+/* ---------- Holes ---------- */
+.holes {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  gap: 15px;
+  margin-top: 35px;
+}
+
+.hole {
+  width: 55px;
+  height: 75px;
+  background: linear-gradient(180deg, #111, #333);
+  border-radius: 8px;
+  border: 2px solid #444;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  cursor: pointer;
+  box-shadow: inset 0 5px 10px rgba(0,0,0,0.9),
+              0 2px 6px rgba(0,0,0,0.4);
+  position: relative;
+  transition: all 0.15s ease;
+  z-index: 2; /* ensure holes appear above metal */
+}
+
+.hole span {
+  position: absolute;
+  bottom: -24px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.hole:hover {
+  transform: translateY(-3px);
+  box-shadow: inset 0 3px 10px rgba(0,0,0,0.7),
+              0 0 8px rgba(0,0,0,0.2);
+}
+
+/* Blow & Draw visuals */
+.hole.active-blow {
+  background: radial-gradient(circle, #fffab0, #d6a700);
+  box-shadow: 0 0 25px #ffec6a, inset 0 3px 10px #fff;
+  transform: scale(1.05);
+}
+
+.hole.active-draw {
+  background: radial-gradient(circle, #a0e9ff, #0077b6);
+  box-shadow: 0 0 25px #00c8ff, inset 0 3px 10px #fff;
+  transform: scale(1.05);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .harmonica-body { width: 95%; height: 190px; }
+}
+
+@media (max-width: 768px) {
+  .harmonica-body {
+    width: 95%;
+    height: 230px; /* taller for two rows */
+    padding: 25px 8px 40px;
+  }
+
+  .holes {
+    flex-wrap: wrap; /* allow wrapping */
+    gap: 18px 10px;
+    justify-content: center;
+  }
+
+  .hole {
+    width: 50px;
+    height: 65px;
+  }
+
+  .hole span {
+    font-size: 0.85rem;
+    bottom: -20px;
+  }
+
+  .metal-bottom { bottom: -18px; }
+}
+
+@media (max-width: 480px) {
+  .harmonica-body {
+    width: 90%;
+    height: 260px; /* more vertical space on phones */
+  }
+
+  .holes { gap: 20px 10px; }
+
+  .hole {
+    width: 45px;
+    height: 60px;
+  }
+
+  .hole span {
+    font-size: 0.8rem;
+    bottom: -18px;
+  }
+
+  .metal-bottom { bottom: -22px; }
+}
