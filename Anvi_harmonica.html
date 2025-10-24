@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Harmonica</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="harmonica">
+      <div class="harmonica-shadow"></div>
+      <div class="harmonica-shell">
+        <div class="harmonica-goldbar"></div>
+        <div class="harmonica-screw left"></div>
+        <div class="harmonica-screw right"></div>
+        <div class="harmonica-slide">
+          <div class="slide-rod"></div>
+          <div class="slide-button"></div>
+        </div>
+        <div class="holes-row" id="holesRow"></div>
+      </div>
+      <div class="hole-output" id="holeOutput"></div>
+    </div>
+    <script>
+      const holeCount = 16;
+      const holesRow = document.getElementById("holesRow");
+      const holeOutput = document.getElementById("holeOutput");
+      for (let i = 1; i <= holeCount; i++) {
+        const btn = document.createElement("button");
+        btn.className = "harmonica-hole";
+        btn.textContent = "";
+        btn.title = "Hole " + i;
+        btn.addEventListener("click", () => {
+          holeOutput.textContent = "+" + i;
+        });
+        holesRow.appendChild(btn);
+      }
+    </script>
+  </body>
+</html>
