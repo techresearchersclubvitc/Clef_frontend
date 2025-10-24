@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-bg: #f9f7f3;
+    --accent-color: #d4af37; 
+    --text-color: #333;
+    --card-bg: #fff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --testimonial-bg: #2b2b2b; 
+    --testimonial-text: #f0f0f0; 
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+}
+
+.Team {
+    padding: 50px 5%;
+    text-align: center;
+    background: var(--primary-bg);
+}
+
+.team-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+.team-subtitle {
+    font-size: 1rem;
+    margin-bottom: 40px;
+    color: #555;
+}
+.lead-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.lead-card {
+    background: linear-gradient(135deg, #fffdf5, #f8f7f2);
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 6px 20px var(--shadow-color);
+    border-radius: 15px;
+    padding: 20px;
+    width: 220px;
+    text-align: center;
+    transform: scale(1.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lead-card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
+}
+
+.lead-card img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-color);
+    margin-bottom: 10px;
+}
+
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 20px;
+    justify-items: center; 
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.team-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    padding: 15px;
+    width: 160px; 
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeUp 1s ease both;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.team-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent-color);
+    margin-bottom: 10px;
+}
+
+.member-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.member-role {
+    font-size: 0.85rem;
+    color: #555;
+    margin: 5px 0;
+}
+
+.member-org {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.Testimonials {
+    background-color: var(--testimonial-bg);
+    padding: 60px 5%;
+    text-align: center;
+    color: var(--testimonial-text);
+}
+
+.testimonial-title {
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    margin-bottom: 30px;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.testimonial-card {
+    background: #3a3a3a;
+    border-left: 4px solid var(--accent-color);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 350px;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: var(--testimonial-text);
+    margin-bottom: 10px;
+}
+
+.testimonial-author {
+    font-weight: 600;
+    color: var(--accent-color);
+    text-align: right;
+}
+
+@media (max-width: 1200px) {
+    .team-container { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+}
+
+@media (max-width: 900px) {
+    .lead-card { width: 180px; }
+    .team-card img { width: 100px; height: 100px; }
+}
+
+@media (max-width: 600px) {
+    .lead-card, .team-card { width: 90%; }
+    .team-container { grid-template-columns: 1fr; }
+}
