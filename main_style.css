@@ -208,7 +208,44 @@
     }
 }
 
+body {
+  scroll-behavior: smooth;
+}
 
+/* Hero Section */
+.hero-section {
+  background: url('Gemini_Generated_Image_8mohel8mohel8moh.png') center center/cover no-repeat;
+  min-height: 100vh;
+}
+
+.hero-section .btn {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-section .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Features Section */
+.feature-card {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  border-radius: 15px;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.card-img-top {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 220px;
+  object-fit: cover;
+}
 
 
 
