@@ -1,0 +1,144 @@
+body {
+  font-family: sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.harmonica {
+  width: 630px;
+  margin: 60px auto 0 auto;
+  position: relative;
+  padding-bottom: 46px;
+}
+
+.harmonica-shadow {
+  width: 595px;
+  height: 18px;
+  margin: 0 auto;
+  background: radial-gradient(ellipse at center, #b2b0aa 65%, transparent 100%);
+  border-radius: 40%;
+  position: absolute;
+  left: 16px;
+  top: 98px;
+  z-index: 0;
+  opacity: 0.35;
+  filter: blur(2.5px);
+}
+
+.harmonica-shell {
+  position: relative;
+  margin: 0 auto;
+  width: 595px;
+  height: 67px;
+  background: linear-gradient(180deg, #edeff5 0%, #d2d5db 31%, #adadaa 80%);
+  border-radius: 18px 18px 24px 24px / 13px 13px 30px 30px;
+  box-shadow: 0 18px 44px #8b8c89ab, 0 -1.5px 8px #eee inset, 0 4px 20px #8885;
+  border: 6.5px solid #b89e36;
+  overflow: visible;
+  z-index: 2;
+}
+
+.harmonica-goldbar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 14px;
+  height: 32px;
+  background: linear-gradient(90deg, #be832a 12%, #e4c373 64%, #b7a04b 100%);
+  border-radius: 13px;
+  border-top: 2.5px solid #e3c774;
+  border-bottom: 2.5px solid #846b1a;
+  z-index: 2;
+  box-shadow: 0 2px 10px #e0ce8792 inset, 0 0 8px #ba9d33e0;
+}
+
+.harmonica-screw {
+  position: absolute;
+  top: 23px;
+  width: 15px;
+  height: 15px;
+  background: radial-gradient(circle at 62% 48%, #ede6b2 74%, #ad903b 100%);
+  border-radius: 50%;
+  border: 2.5px solid #c3a648;
+  box-shadow: 0 2px 8px #885e08a6 inset, 0 0.5px 2px #e5d782bb;
+  z-index: 11;
+}
+.harmonica-screw.left {
+  left: 16px;
+}
+.harmonica-screw.right {
+  right: 16px;
+}
+
+.harmonica-slide {
+  position: absolute;
+  right: -42px;
+  top: 27px;
+  width: 38px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  z-index: 15;
+}
+.slide-rod {
+  width: 22px;
+  height: 7px;
+  background: linear-gradient(180deg, #ccc 50%, #dfd19d 100%);
+  border: 1.2px solid #b2a855;
+  border-radius: 5px 0 0 5px / 4px 0 0 4px;
+}
+.slide-button {
+  width: 16px;
+  height: 18.5px;
+  background: radial-gradient(ellipse at 60% 42%, #ebd699 81%, #be9230 100%);
+  border: 2px solid #af9230;
+  border-radius: 0 50% 50% 0/ 0 56% 56% 0;
+  margin-left: -3.5px;
+  box-shadow: 0 1.5px 8px #dbcb88a9;
+}
+
+.holes-row {
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  top: 18px;
+  height: 31px;
+  display: flex;
+  gap: 5px;
+  z-index: 8;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.harmonica-hole {
+  width: 24px;
+  height: 25px;
+  border-radius: 29%/42%;
+  background: linear-gradient(180deg, #191716 70%, #3f3a36 98%);
+  border: 2.2px solid #9e8422;
+  box-shadow: 0 1px 8px #baa44482, 0 1px 8px #222 inset;
+  font-size: 0.92rem;
+  color: #b3992c;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.21s, box-shadow 0.13s;
+  margin-top: 3px;
+  margin-bottom: 3.2px;
+}
+.harmonica-hole:hover,
+.harmonica-hole:focus {
+  background: linear-gradient(180deg, #2b2826 85%, #514b47 100%);
+  border-color: #e9cd79;
+  box-shadow: 0 0 13px #000000a0, 0 0 14px #faee8b;
+}
+
+.hole-output {
+  margin-top: 35px;
+  font-size: 1.23rem;
+  color: #b3992c;
+  min-height: 28px;
+  font-weight: bold;
+  transition: color 0.17s;
+}
