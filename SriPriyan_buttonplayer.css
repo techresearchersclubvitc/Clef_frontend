@@ -96,7 +96,7 @@ body {
     border: 0;
 }
 
-/* Keyboard focus indicator (WCAG compliance) */
+/* Keyboard focus indicator (WCAG compliance) */    
 *:focus-visible {
     outline: 3px solid var(--primary-color);
     outline-offset: 2px;
