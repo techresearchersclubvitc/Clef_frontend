@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clef | Music Made Simple</title> 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-3" href="#">Clef</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Landing Section -->
+  <section id="home" class="hero-section d-flex align-items-center text-center text-white">
+    <div class="container">
+      <h1 class="display-3 fw-bold mb-3">Welcome to Clef</h1>
+      <p class="lead mb-4">Where melody meets simplicity — Explore, Learn, and Play your favorite instruments.</p>
+      <a href="#features" class="btn btn-light btn-lg rounded-pill px-4">Explore Features</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-5">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-5">Our Musical Features</h2>
+      <div class="row g-4 justify-content-center">
+
+        <!-- Feature Card 1: Harmonica -->
+        <div class="col-md-4">
+          <div class="card feature-card shadow h-100" onclick="navigateToFeature('Anvi_harmonica.html')">
+            <img src="https://www.shutterstock.com/image-photo/milan-lombardy-italy-july-21-260nw-1810176607.jpg" class="card-img-top" alt="Harmonica">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Harmonica</h5>
+              <p class="card-text">Learn and play soulful harmonica tunes through guided lessons and interactive visuals.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Future Feature Cards (Reusable Layout) -->
+        <div class="col-md-4">
+          <div class="card feature-card shadow h-100" onclick="navigateToFeature('flute.html')">
+            <img src="https://wallpapercave.com/wp/wp11271926.jpg" class="card-img-top" alt="Flute">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Flute (Coming Soon)</h5>
+              <p class="card-text">Explore the soothing sound of the flute — intuitive lessons coming soon.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card feature-card shadow h-100" onclick="navigateToFeature('guitar.html')">
+            <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=600&q=60" class="card-img-top" alt="Guitar">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Guitar (Coming Soon)</h5>
+              <p class="card-text">Master the art of strings with lessons, chord guides, and virtual play mode.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="bg-light py-5">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-3">About Clef</h2>
+      <p class="lead mx-auto" style="max-width: 700px;">Clef is your musical companion — designed for enthusiasts and learners to explore various instruments with interactive digital guidance.</p>
+    </div>
+  </section>
+
+
+  <div class="Team">
+        <h2 class="team-title">Meet the LearnMusic Team</h2>
+        <p class="team-subtitle">The passionate students behind the first release of LearnMusic</p>
+
+        <div class="lead-container">
+
+            <div class="team-card lead-card">
+                <img src="images/aditya.jpg" alt="Aditya N Bhandari">
+                <h3 class="member-name">Aditya N Bhandari</h3>
+                <p class="member-role">Project Lead – Backend Developer</p>
+                <p class="member-org">VIT Chennai</p>
+            </div>
+
+            <div class="team-card lead-card">
+                <img src="images/priyanka.jpg" alt="Priyanka G">
+                <h3 class="member-name">Priyanka G</h3>
+                <p class="member-role">Design Lead – UI/UX Designer</p>
+                <p class="member-org">VIT Chennai</p>
+            </div>
+        </div>
+
+        <div class="team-container">
+
+            <div class="team-card">
+                <img src="images/tanay.jpg" alt="Tanay Mitra">
+                <h3 class="member-name">Tanay Mitra</h3>
+                <p class="member-role">Backend Developer – Text Extractor Component</p>
+                <p class="member-org">VIT Chennai</p>
+            </div>
+
+            <div class="team-card">
+                <img src="images/girish.jpg" alt="Girish">
+                <h3 class="member-name">Girish</h3>
+                <p class="member-role">Backend Developer – Text Formatter Component</p>
+                <p class="member-org">VIT Chennai</p>
+            </div>
+
+            <div class="team-card">
+                <img src="images/vinayak.jpg" alt="Vinayak">
+                <h3 class="member-name">Vinayak</h3>
+                <p class="member-role">Backend Developer – Key Value Pairs Method</p>
+                <p class="member-org">VIT Chennai</p>
+            </div>
+
+            <div class="team-card">
+                <img src="images/akhil.jpg" alt="Akhil Jatia">
+                <h3 class="member-name">Akhil Jatia</h3>
+                <p class="member-role">Backend Developer – Encryption & Decryption</p>
+                <p class="member-org">VIT Chennai</p>
+            </div>
+
+            <div class="team-card">
+                <img src="images/sripriyan.jpg" alt="Sri Priyan">
+                <h3 class="member-name">Sri Priyan</h3>
+                <p class="member-role">Backend & Frontend – Button Audio Player</p>
+                <p class="member-org">VIT Chennai</p>
+            </div>
+
+            <div class="team-card">
+                <img src="images/omar.jpg" alt="Omar">
+                <h3 class="member-name">Omar</h3>
+                <p class="member-role">Frontend Developer – Landing Page & Feature Cards</p>
+                <p class="member-org">VIT Chennai</p>
+            </div>
+
+            <div class="team-card">
+                <img src="images/anvi.jpg" alt="Anvi Bansal">
+                <h3 class="member-name">Anvi Bansal</h3>
+                <p class="member-role">Frontend Developer – Harmonica Animation Page</p>
+                <p class="member-org">VIT Chennai</p>
+            </div>
+
+            <div class="team-card">
+                <img src="images/akhila.jpg" alt="Pandilla S Akhila">
+                <h3 class="member-name">Pandilla S Akhila</h3>
+                <p class="member-role">Frontend Developer – Team & Contributors Section</p>
+                <p class="member-org">VIT Chennai</p>
+            </div>
+
+            <div class="team-card">
+                <img src="images/nerolina.jpg" alt="Nerolina">
+                <h3 class="member-name">Nerolina</h3>
+                <p class="member-role">Frontend Developer – Contact Us & Footer</p>
+                <p class="member-org">VIT Chennai</p>
+            </div>
+
+        </div>
+    </div>
+    <div class="Testimonials">
+        <h2 class="testimonial-title">What Learners Say</h2>
+        <div class="testimonial-container">
+            <div class="testimonial-card">
+                <p class="testimonial-text">
+                    “The LearnMusic site is simple and clear — a great way to start learning instruments like the harmonica!”
+                </p>
+                <h4 class="testimonial-author">— Riya Mehta</h4>
+            </div>
+
+            <div class="testimonial-card">
+                <p class="testimonial-text">
+                    “Really impressed with how each contributor brought their piece together into a smooth, working website.”
+                </p>
+                <h4 class="testimonial-author">— Arjun Nair</h4>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="Akhila_Teams&Contribution_script.js"></script>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact & Footer</title>
+    <link rel="stylesheet" href="main_style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+    <div class="ContactFooterApp">
+       
+        <section class="contact-section">
+            <h2>Contact Us</h2>
+            <form class="contact-form" id="contactForm" novalidate>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required />
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required />
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Your message" required></textarea>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+            <div class="contact-details">
+                <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+                <p>Phone: +91 123 456 7890</p>
+                <p>Address: Chennai</p>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <div class="social-icons">
+                <a href="#" class="social-icon" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon" aria-label="[translate:X]" title="[translate:X]">
+                    <img src="x-logo.svg" alt="[translate:X] logo" />
+                </a>
+                <a href="#" class="social-icon" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="main_script.js"></script>
+
+</body>
+</html>
